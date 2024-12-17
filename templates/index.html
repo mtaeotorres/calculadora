@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+
+    <form method="POST">
+        <label for="num1">Primer número:</label>
+        <input type="text" id="num1" name="num1" required><br><br>
+
+        <label for="num2">Segundo número:</label>
+        <input type="text" id="num2" name="num2" required><br><br>
+
+        <label for="operacion">Operación:</label>
+        <select name="operacion" id="operacion">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado is not none %}
+        <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>
